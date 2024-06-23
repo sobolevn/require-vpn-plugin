@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "require-vpn",
+  "description": "FireFox plugin to require an existing VPN connection before accessing specified hosts",
+  "version": "3.0.0",
+
+  "icons": {
+    "48": "icons/block.svg",
+    "96": "icons/block.svg"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "require-vpn@sobolevn",
+      "strict_min_version": "91.1.0"
+    }
+  },
+
+  "background": {
+    "scripts": [
+      "background/proxy-handler.js"
+    ]
+  },
+
+  "options_ui": {
+    "page": "options/options.html",
+    "browser_style": true
+  },
+
+  "permissions": ["proxy", "storage", "<all_urls>"]
+}
