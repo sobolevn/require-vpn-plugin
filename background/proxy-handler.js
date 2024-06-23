@@ -1,7 +1,7 @@
 // Logging
 
 // TODO: adjust in development
-const verbose = 1
+const verbose = 0
 
 function log(data) {
   if (verbose) {
@@ -46,12 +46,6 @@ async function handleProxyRequest(requestInfo) {
     'IP_CHECKER_URL',
     'PROXY_URI',
   ]);
-  console.log(
-    BLOCKED_HOSTS,
-    VPN_IP,
-    IP_CHECKER_URL,
-    PROXY_URI,
-  );
 
   const url = new URL(requestInfo.url);
   if (BLOCKED_HOSTS && BLOCKED_HOSTS.indexOf(url.hostname) != -1) {
@@ -64,7 +58,7 @@ async function handleProxyRequest(requestInfo) {
         host: proxyUrl.hostname,
         port: proxyUrl.port,
       };
-      log(proxySpec);
+      log(`Proxy spec: ${proxySpec}`);
       return proxySpec;
     }
   }
