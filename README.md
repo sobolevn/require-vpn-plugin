@@ -2,6 +2,8 @@
 
 FireFox plugin to require an existing VPN connection before accessing specified hosts.
 
+Install from Mozilla's official MarketPlace: https://addons.mozilla.org/addon/require-vpn
+
 ## Example
 
 Let's say you have a website with a sensitive data (your bank account, work project, password store, etc) that you don't want to accidentally access with an untrusted network.
