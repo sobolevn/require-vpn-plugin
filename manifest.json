@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "require-vpn",
   "description": "FireFox plugin to require an existing VPN connection before accessing specified hosts",
-  "version": "3.1.0",
+  "version": "3.1.1",
 
   "icons": {
     "48": "icons/block.svg",
