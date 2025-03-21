@@ -13,7 +13,7 @@ const defaults = {
 // Store the currently selected settings using browser.storage.sync.
 async function storeSettings() {
   let blockedHosts = blockedHostsTextArea.value.split('\n').map(i => i.trim());
-  let vpnIp = vpnIpInput.value.trim();
+  let vpnIp = vpnIpInput.value.split('\n').map(i => i.trim());
   let ipCheckerUrl = ipCheckerUrlInput.value.trim();
   let proxyUri = proxyUriInput.value.trim();
 
@@ -39,7 +39,7 @@ async function restoreOptions() {
   await browser.storage.sync.set(defaults);
 
   blockedHostsTextArea.value = defaults.BLOCKED_HOSTS.join('\n');
-  vpnIpInput.value = defaults.VPN_IP;
+  vpnIpInput.value = defaults.VPN_IP.join('\n');
   ipCheckerUrlInput.value = defaults.IP_CHECKER_URL;
   proxyUriInput.value = defaults.PROXY_URI;
 }
