@@ -24,7 +24,7 @@ Here's how it works:
 
 - `VPN_IP` - your VPN IP, which is expected; can be a new-line separated list of IPs. Can also contain IP masks like `192.168.*` which will match any IPs starting with `192.168.`
 - `BLOCKED_HOSTS` - a new-line separated list with hostnames of blocked resources, default: `['example.com']`
-- `IP_CHECKER_URL` - a URL to any service that will receive a `GET` request and return your API in plain text, default: `http://icanhazip.com`
+- `IP_CHECKER_URL` - a URL to any service that will receive a `GET` request and return your API in plain text, default: `https://icanhazip.com`
 - `PROXY_URI` - a URI for your proxy server to where a redirect will be made, see [here](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/ProxyInfo) what formats are supported, default: `http://localhost:63555`
 
 ## Contributing

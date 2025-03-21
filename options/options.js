@@ -6,7 +6,7 @@ const proxyUriInput = document.querySelector('#proxy-uri');
 const defaults = {
   'BLOCKED_HOSTS': ['example.com'],
   'VPN_IP': '',
-  'IP_CHECKER_URL': 'http://icanhazip.com',
+  'IP_CHECKER_URL': 'https://icanhazip.com',
   'PROXY_URI': 'http://localhost:63555',
 }
 
